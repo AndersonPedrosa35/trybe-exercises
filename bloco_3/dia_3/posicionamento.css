@@ -11,6 +11,18 @@
       }
       p {
           position: absolute;
-          bottom: -3080px;
-          left: 70px;   
+          bottom: -2515px;
+          left: 100px;
+          z-index: 2;   
+      }
+      .baloon {
+          position: absolute;
+          right: 950px;
+          bottom: -2600px;
+          z-index: 1;
+      }
+      .bowser {
+          position: relative;
+          left: 300px;
+          
       }
