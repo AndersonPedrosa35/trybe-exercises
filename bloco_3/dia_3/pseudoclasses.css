@@ -13,3 +13,18 @@ div:hover {
 div:nth-last-of-type(3) {
     font-size: 100px;
 }
+div:nth-last-of-type(1) {
+    color: red;
+}
+div:nth-last-of-type(2) {
+    color: grey;
+}
+div:nth-last-of-type(3) {
+    color:green;
+}
+div:nth-last-of-type(4) {
+    color: yellow;
+}
+div:nth-last-of-type(5) {
+    color:  blue;
+}
