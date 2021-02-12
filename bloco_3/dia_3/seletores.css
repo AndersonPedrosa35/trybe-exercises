@@ -10,8 +10,7 @@ li:hover {
 li:active {
     font-family: monospace;
 }
-/* Adicione uma lista não ordenada com, pelo menos, 3 características que você gosta.
-No 'style.css', adicione a propriedade 'list-style: none' para ambas as listas. */
+
 li, p {
     list-style: none;
     text-align: center;
