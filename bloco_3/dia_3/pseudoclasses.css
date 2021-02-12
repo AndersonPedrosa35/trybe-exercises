@@ -1,4 +1,15 @@
+/* Faça cada div ter uma cor própria.
+Estilize cada uma das tags <h3>.
+Faça a terceira div ser maior que as demais.
+Deixe as tags ímpares <h3> com o texto em itálico. */
 div:hover {
     border: 1px solid #f5f5f5;
     transition: 1s;
+}
+div:hover {
+    background-color:silver;
+}
+
+div:nth-last-of-type(3) {
+    font-size: 100px;
 }
