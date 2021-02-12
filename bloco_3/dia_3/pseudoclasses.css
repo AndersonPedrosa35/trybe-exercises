@@ -28,3 +28,18 @@ div:nth-last-of-type(4) {
 div:nth-last-of-type(5) {
     color:  blue;
 }
+h3:nth-last-of-type(1) {
+    font-family: Helvetica;
+}
+h3:nth-last-of-type(2) {
+    font-family: Arial;
+}
+h3:nth-last-of-type(3) {
+    font-family: sans-serif;
+}
+h3:nth-last-of-type(4) {
+    font-family: Calibri;
+}
+h3:nth-last-of-type(5) {
+    font-family: serif;
+}
