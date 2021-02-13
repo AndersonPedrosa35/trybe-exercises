@@ -1,45 +1,56 @@
-/* Faça cada div ter uma cor própria.
-Estilize cada uma das tags <h3>.
-Faça a terceira div ser maior que as demais.
-Deixe as tags ímpares <h3> com o texto em itálico. */
+
 div:hover {
     border: 1px solid #f5f5f5;
     transition: 1s;
 }
+
 div:hover {
     background-color:silver;
 }
 
-div:nth-last-of-type(3) {
+div:nth-of-type(3) {
     font-size: 100px;
 }
-div:nth-last-of-type(1) {
+
+div:nth-of-type(1) {
     color: red;
 }
-div:nth-last-of-type(2) {
+
+div:nth-of-type(2) {
     color: grey;
 }
-div:nth-last-of-type(3) {
+
+div:nth-of-type(3) {
     color:green;
 }
-div:nth-last-of-type(4) {
+
+div:nth-of-type(4) {
     color: yellow;
 }
-div:nth-last-of-type(5) {
+
+div:nth-of-type(5) {
     color:  blue;
 }
-h3:nth-last-of-type(1) {
+
+h3:nth-of-type(1) {
     font-family: Helvetica;
 }
-h3:nth-last-of-type(2) {
-    font-family: Arial;
+
+h3:nth-of-type(2) {
+    font-family: serif;
 }
-h3:nth-last-of-type(3) {
+
+h3:nth-of-type(3) {
     font-family: sans-serif;
 }
-h3:nth-last-of-type(4) {
+
+h3:nth-of-type(4) {
     font-family: Calibri;
 }
-h3:nth-last-of-type(5) {
+
+h3:nth-of-type(5) {
     font-family: serif;
+}
+div:nth-of-type(odd) {
+font-style: italic;
 }
