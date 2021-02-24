@@ -15,3 +15,16 @@ else {
     console.log("B venceu");
 }
 
+switch (true) {
+    case a > b && a > c:
+        console.log("A é o maior");
+        break;
+
+    case b > a && b > c:
+        console.log("B é o maior");
+        break;
+
+    case c > a && c > b:
+        console.log("C é o maior");
+        break;
+}
