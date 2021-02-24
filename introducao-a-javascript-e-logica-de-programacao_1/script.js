@@ -41,4 +41,17 @@ switch (true) {
         console.log("Zero");
         break;
 }
+// Parametros do atan2 > X    Y             Graus
+console.log(Math.atan2(233.5, 180) * 180 / Math.PI);
 
+let triangulo = 180;
+let hipo;
+let cata;
+let cate;
+triangulo = hipo + cata + cate;
+if (triangulo = 180) {
+    console.log("Acertou");
+}
+else {
+    console.log("Errou");
+}
