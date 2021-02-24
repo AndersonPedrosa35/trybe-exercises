@@ -28,3 +28,17 @@ switch (true) {
         console.log("C é o maior");
         break;
 }
+switch (true) {
+    case a * b + c < 0:
+        console.log("Negativo");
+        break;
+
+    case a * b + c > 0:
+        console.log("Positivo");
+        break;
+
+    case a * b + c == 0:
+        console.log("Zero");
+        break;
+}
+
