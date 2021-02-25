@@ -5,7 +5,15 @@ total = 0;
 //     console.log(numbers[i]);
 // }
 
+// for (var i = 0; i < numbers.length; i += 1) {
+//     total += numbers[i];
+// }
+
 for (var i = 0; i < numbers.length; i += 1) {
-    total += numbers[i];
-}
-console.log(total);
+        total += numbers[i];
+}  
+total = total / numbers.length-1;
+
+
+    
+
