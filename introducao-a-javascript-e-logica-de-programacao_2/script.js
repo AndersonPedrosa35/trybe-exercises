@@ -26,17 +26,24 @@
 //     }
         
 // }   console.log(comparar);   
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 let par = 0; 
+// for (var i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] % 2 == 0) {
+//         par += 1;
+//     }
+// }  console.log(par);
+// if (par == 0) {
+//     console.log("Nenhum par");
+// }
+// else {
+//     console.log("Há pares");
+// }
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let comparar = 100;
 for (var i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] % 2 == 0) {
-        par += 1;
+    if(numbers[i] < comparar) {
+        comparar = numbers[i];
     }
-}  console.log(par);
-if (par == 0) {
-    console.log("Nenhum par");
-}
-else {
-    console.log("Há pares");
-}
+        
+}   console.log(comparar);   
