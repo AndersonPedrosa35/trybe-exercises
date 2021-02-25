@@ -13,6 +13,12 @@ for (var i = 0; i < numbers.length; i += 1) {
         total += numbers[i];
 }  
 total = total / numbers.length-1;
+if (total > 20) {
+    console.log("Valor maior que 20");
+}
+else {
+    console.log("Valor menos ou igual a 20");
+}
 
 
     
