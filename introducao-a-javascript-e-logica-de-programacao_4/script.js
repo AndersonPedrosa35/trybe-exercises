@@ -32,15 +32,26 @@
 //   }
 // }
 // console.log(verificaPalindrome("desenvolvedor"))
-let array = [2, 3, 6, 7, 10, 1];
+//  let array = [2, 3, 6, 7, 10, 1];
 
-function verificaArray(array) {
-  let indiceMaiorValor = 0;
+// function verificaArray(array) {
+//   let indiceMaiorValor = 0;
+//   for (let index = 0; index < array.length; index += 1) {
+//     if (array[indiceMaiorValor] < array[index]) {
+//       indiceMaiorValor = index;
+//     }
+//   }
+//   return indiceMaiorValor;
+// }
+// console.log(verificaArray(array))
+
+let array = [2, 4, 6, 7, 10, 0, -3];
+function verificaArray(array){
+  let indiceMenorNumero = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (array[indiceMaiorValor] < array[index]) {
-      indiceMaiorValor = index;
+    if (indiceMenorNumero > array[index]) {
+      indiceMenorNumero = index;
     }
   }
-  return indiceMaiorValor;
-}
-console.log(verificaArray(array))
+  return indiceMenorNumero;
+} console.log(verificaArray(array));
