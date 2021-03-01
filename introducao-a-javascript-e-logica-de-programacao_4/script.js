@@ -45,13 +45,24 @@
 // }
 // console.log(verificaArray(array))
 
-let array = [2, 4, 6, 7, 10, 0, -3];
-function verificaArray(array){
-  let indiceMenorNumero = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (indiceMenorNumero > array[index]) {
-      indiceMenorNumero = index;
+// let array = [2, 4, 6, 7, 10, 0, -3];
+// function verificaArray(array){
+//   let indiceMenorNumero = 0;
+//   for (let index = 0; index < array.length; index += 1) {
+//     if (indiceMenorNumero > array[index]) {
+//       indiceMenorNumero = index;
+//     }
+//   }
+//   return indiceMenorNumero;
+// } console.log(verificaArray(array));
+
+let array = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+function compararString (array) {
+  let maiorCaracter = "S";
+  for (let index in array) {
+    if (maiorCaracter.length < array[index].length) {
+      maiorCaracter = array[index];
     }
-  }
-  return indiceMenorNumero;
-} console.log(verificaArray(array));
+  } 
+  return maiorCaracter;
+} console.log(compararString(array));
