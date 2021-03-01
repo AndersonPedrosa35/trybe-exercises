@@ -22,8 +22,10 @@
 
 function verificaPalindrome(string) {
   let palindrome = 'arara';
-  string = palindrome ? true : false;
-  
-  return string;
+  if (string == palindrome) {
+    return true;
+  }else {
+    return false;
+  }
 }
-console.log(verificaPalindrome("arara"))
+console.log(verificaPalindrome("desenvolvedor"))
