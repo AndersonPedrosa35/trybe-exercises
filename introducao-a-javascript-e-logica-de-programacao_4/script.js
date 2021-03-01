@@ -8,5 +8,5 @@ let info = {
 console.log(`Seja bem-vinda ${info.personagem}`);
 console.log(info)
 for (let key in info) {
-  console.log(key);
+  console.log(info[key]);
 };
