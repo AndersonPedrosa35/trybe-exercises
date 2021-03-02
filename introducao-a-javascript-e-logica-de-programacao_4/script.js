@@ -56,13 +56,28 @@
 //   return indiceMenorNumero;
 // } console.log(verificaArray(array));
 
-let array = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
-function compararString (array) {
-  let maiorCaracter = "S";
-  for (let index in array) {
-    if (maiorCaracter.length < array[index].length) {
-      maiorCaracter = array[index];
-    }
-  } 
-  return maiorCaracter;
-} console.log(compararString(array));
+// let array = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+// function compararString (array) {
+//   let maiorCaracter = "S";
+//   for (let index in array) {
+//     if (maiorCaracter.length < array[index].length) {
+//       maiorCaracter = array[index];
+//     }
+//   } 
+//   return maiorCaracter;
+// } console.log(compararString(array));
+
+// let array = [2, 3, 2, 5, 8, 2, 3];
+// function repeatNumbers(array) {
+//   for (let repeat in array) {
+//      //numeros repetidos
+//     }
+//   }
+// } 
+let n = 5;
+function sum(n) {
+  let total = 0;
+  for (let index = 0; index <= n; index += 1) {
+    total += index;
+  } return total;
+} console.log(sum(n))
