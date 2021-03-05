@@ -18,7 +18,7 @@
         <div id="quartoEUltimoFilho"></div>
       </div>
     </div>
-    <script>
+  <script>
   document.getElementById("elementoOndeVoceEsta").parentNode.style.color = "red";
   document.getElementById("primeiroFilhoDoFilho").innerText = "Olá, eu estou aqui também";
   document.getElementById("pai").firstChild;
@@ -30,7 +30,7 @@
   let pai = document.getElementById("pai");
   let filho = document.createElement("div");
   pai.appendChild(filho);
-
+   pai.id("pai")
   let ondeVoceEsta = document.getElementById("elementoOndeVoceEsta");
   let filhoOndeEstou = document.createElement("p");
   document.getElementsByTagName("p").innerText = "Olá";
@@ -42,6 +42,8 @@
   filhoDoFilho.appendChild(filhoFilho);
 
   document.getElementsByTagName("p")[0].parentNode.parentNode.nextElementSibling;
+  let arrayDiv = document.getElementsByTagName("div");
+  
   </script>  
 </body>
 </html>
