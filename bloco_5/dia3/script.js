@@ -14,3 +14,38 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
+const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+function createDaysList () {
+  let daysPAi = document.getElementById("days");
+  for (let index = 0; index < dezDaysList.length; index += 1) {
+    let day = dezDaysList[index];
+    let list = document.createElement("li");
+    list.innerHTML = day;
+    list.className = "day";
+    daysPAi.appendChild(list);
+     if (day == 24 | day == 25 | day == 31) {
+       list.className = "holiday";
+     }
+     if (day == 4 | day == 11 | day == 18 | day == 25) {
+      list.className = "friday";
+    }
+  }
+} createDaysList();
+
+function btnHoliday (feriados) {
+  let btnPai = document.querySelector(".buttons-container");
+  let btn = document.createElement("button");
+  btn.innerHTML = feriados;
+  btn.className = "btn-holiday";
+  btnPai.appendChild(btn);
+} btnHoliday("Feriados");
+
+let btnHolidays = document.querySelector(".btn-holiday");
+let listHoliday = document.querySelectorAll(".holiday");
+function btnClickHoliday () {
+  for (let index = 0; index < listHoliday.length; index += 1) {
+    listHoliday[index].style.backgroundColor = "green";
+  }
+} 
+
+btnHolidays.addEventListener("click", btnClickHoliday);
