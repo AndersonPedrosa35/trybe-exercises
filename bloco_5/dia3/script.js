@@ -48,4 +48,11 @@ function btnClickHoliday () {
   }
 } 
 
+function btnClickHolidayInverse () {
+  for (let index = 0; index < listHoliday.length; index += 1) {
+    listHoliday[index].style.backgroundColor = "rgb(238, 238, 238)";
+  }
+} 
+
 btnHolidays.addEventListener("click", btnClickHoliday);
+btnHolidays.addEventListener("dblclick", btnClickHolidayInverse);
