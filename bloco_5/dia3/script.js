@@ -65,3 +65,26 @@ function buttonFriday (friday) {
   btnPai.appendChild(btnFriday);
 } buttonFriday("Sexta-Feira");
 
+let btnFridays = document.querySelector(".btn-friday");
+let listFridays = document.querySelectorAll(".friday");
+
+function btnFridayClick () {
+  for (let index = 0; index < listFridays.length; index += 1) {
+    listFridays[index].innerHTML = "SEXTOU";
+  } 
+}
+
+// function btnFridayClickInverse () {
+//   for (let index = 0; index < listFridays.length; index += 1) {
+//     listFridays[index].innerHTML = reset;
+// }
+
+btnFridays.addEventListener("click", btnFridayClick);
+//btnFridays.addEventListener("dblclick", btnFridayClickInverse);
+
+function adicionaTarefa (tarefa) {
+  let tarefaPai = document.querySelector(".my-tasks");
+  let tarefas = document.createElement("span");
+  tarefas.innerText = tarefa;
+  tarefaPai.appendChild(tarefas);    
+} adicionaTarefa("cozinhar");
