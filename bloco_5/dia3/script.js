@@ -56,3 +56,12 @@ function btnClickHolidayInverse () {
 
 btnHolidays.addEventListener("click", btnClickHoliday);
 btnHolidays.addEventListener("dblclick", btnClickHolidayInverse);
+
+function buttonFriday (friday) {
+  let btnPai = document.querySelector(".buttons-container");
+  let btnFriday = document.createElement("button");
+  btnFriday.innerHTML = friday;
+  btnFriday.className = "btn-friday";
+  btnPai.appendChild(btnFriday);
+} buttonFriday("Sexta-Feira");
+
