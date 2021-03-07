@@ -89,13 +89,13 @@ function adicionaTarefa (tarefa) {
   tarefaPai.appendChild(tarefas);    
 } adicionaTarefa("cozinhar");
 
-function adicionaLegendaTarefa (cor) {
+function adicionaLegendaTask (cor) {
   let tarefaPai = document.querySelector(".my-tasks");
   let legenda = document.createElement("div");
   legenda.style.backgroundColor = cor;
   legenda.className = "task";
   tarefaPai.appendChild(legenda);
-} adicionaLegendaTarefa("yellow");
+} adicionaLegendaTask("yellow");
 
 let tarefaPai = document.querySelector(".my-tasks");
 let buscaLegenda = document.querySelector(".task");
@@ -103,8 +103,20 @@ let buscaLegenda = document.querySelector(".task");
 function selectTask () {
   buscaLegenda.className = "task-selected";
 }
+
 function selectTaskInverse () {
   buscaLegenda.className = "task";
 }
+
 buscaLegenda.addEventListener("click", selectTask);
 buscaLegenda.addEventListener("dblclick", selectTaskInverse);
+
+let taskDay = document.querySelectorAll(".day");
+
+function addTask () {
+  for (let index = 0; index < taskDay.length; index += 1) {
+  taskDay[index].style.backgroundColor = "red";
+  }
+}
+
+taskDay.addEventListener("click", addTask);
