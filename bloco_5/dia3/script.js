@@ -88,3 +88,11 @@ function adicionaTarefa (tarefa) {
   tarefas.innerText = tarefa;
   tarefaPai.appendChild(tarefas);    
 } adicionaTarefa("cozinhar");
+
+function adicionaLegendaTarefa (cor) {
+  let tarefaPai = document.querySelector(".my-tasks");
+  let legenda = document.createElement("div");
+  legenda.style.backgroundColor = cor;
+  legenda.className = "task";
+  tarefaPai.appendChild(legenda);
+} adicionaLegendaTarefa("yellow");
