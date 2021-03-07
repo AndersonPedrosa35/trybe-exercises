@@ -96,3 +96,15 @@ function adicionaLegendaTarefa (cor) {
   legenda.className = "task";
   tarefaPai.appendChild(legenda);
 } adicionaLegendaTarefa("yellow");
+
+let tarefaPai = document.querySelector(".my-tasks");
+let buscaLegenda = document.querySelector(".task");
+  
+function selectTask () {
+  buscaLegenda.className = "task-selected";
+}
+function selectTaskInverse () {
+  buscaLegenda.className = "task";
+}
+buscaLegenda.addEventListener("click", selectTask);
+buscaLegenda.addEventListener("dblclick", selectTaskInverse);
