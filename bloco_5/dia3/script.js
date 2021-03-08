@@ -112,11 +112,11 @@ buscaLegenda.addEventListener("click", selectTask);
 buscaLegenda.addEventListener("dblclick", selectTaskInverse);
 
 let taskDay = document.querySelectorAll(".day");
+let taskFriday = document.querySelectorAll(".friday");
+let taskHoliday = document.querySelectorAll(".holiday");
 
-function addTask () {
-  for (let index = 0; index < taskDay.length; index += 1) {
-  taskDay[index].style.backgroundColor = "red";
-  }
+function task () {
+  taskDay.style.backgroundColor = "red";
 }
 
-taskDay.addEventListener("click", addTask);
+taskDay.addEventListener("click", task);
