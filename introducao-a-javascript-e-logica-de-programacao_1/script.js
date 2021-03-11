@@ -55,3 +55,17 @@ if (triangulo = 180) {
 else {
     console.log("Errou");
 }
+
+function bispo {
+    return "movimentos";
+}
+
+//   requisito 6
+//   if (bispo ) {
+//     console.log("movimentar");
+// }
+
+let porcentagem =  / 100;
+switch (porcentagem) {
+    case 
+}

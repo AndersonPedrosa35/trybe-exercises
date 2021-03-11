@@ -13,21 +13,21 @@ function createDaysOfTheWeek() {
 
 createDaysOfTheWeek();
 
-// Escreva seu código abaixo.
+// Escreva seu código abaixo
+let daysPai = document.getElementById("days");
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 function createDaysList () {
-  let daysPAi = document.getElementById("days");
   for (let index = 0; index < dezDaysList.length; index += 1) {
     let day = dezDaysList[index];
     let list = document.createElement("li");
     list.innerHTML = day;
     list.className = "day";
-    daysPAi.appendChild(list);
+    daysPai.appendChild(list);
      if (day == 24 | day == 25 | day == 31) {
-       list.className = "holiday";
+       list.classList.add("holiday");
      }
      if (day == 4 | day == 11 | day == 18 | day == 25) {
-      list.className = "friday";
+      list.classList.add("friday");
     }
   }
 } createDaysList();
@@ -90,11 +90,15 @@ function adicionaTarefa (tarefa) {
 } adicionaTarefa("cozinhar");
 
 function adicionaLegendaTask (cor) {
+  const select = document.getElementsByClassName('selected');
   let tarefaPai = document.querySelector(".my-tasks");
   let legenda = document.createElement("div");
-  legenda.style.backgroundColor = cor;
   legenda.className = "task";
+  legenda.style.backgroundColor = cor;
   tarefaPai.appendChild(legenda);
+  for (let index = 0; index < select.length; index += 1) {
+    select[index].style.backgroundColor = cor;
+  }
 } adicionaLegendaTask("yellow");
 
 let tarefaPai = document.querySelector(".my-tasks");
@@ -110,13 +114,16 @@ function selectTaskInverse () {
 
 buscaLegenda.addEventListener("click", selectTask);
 buscaLegenda.addEventListener("dblclick", selectTaskInverse);
-
+// =============================================================
 let taskDay = document.querySelectorAll(".day");
 let taskFriday = document.querySelectorAll(".friday");
 let taskHoliday = document.querySelectorAll(".holiday");
 
-function task () {
-  taskDay.style.backgroundColor = "red";
-}
-
-taskDay.addEventListener("click", task);
+daysPai.addEventListener("click", function (event) {
+  if (!event.target.classList.contains('selected') && event.target.classList.contains('day')) {
+    event.target.classList.add('selected');
+  }
+  else if (event.target.classList.contains('selected') && event.target.classList.contains('day')) {
+    event.target.classList.remove('selected');
+  }
+});
