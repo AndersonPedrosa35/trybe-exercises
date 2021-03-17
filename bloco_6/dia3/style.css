@@ -19,7 +19,7 @@
 }
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 98%;
   margin: auto;
@@ -46,8 +46,9 @@ section p {
   border: solid rgb(72, 185, 72) 1px;
 }
 footer {
-  text-align: center;
-}
-footer img {
-  margin: 20px 2px 0 2px;
+  display: flex;
+  background-color: rgb(7, 105, 7);
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
