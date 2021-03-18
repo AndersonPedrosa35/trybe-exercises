@@ -17,10 +17,14 @@ body {
 .logo-container {
   display: flex;
   justify-content: center;
+  min-width: 270px;
+  order: -1;
 }
 
 .menu-container {
   display: flex;
+  width: 500px;
+  align-items: center;
 }
 
 .menu-container ul {
@@ -36,3 +40,13 @@ body {
   list-style: none;
   margin-right: 10px;
 }
+@media(min-width: 768px) {
+  .header-container {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .menu-container {
+    width: 60%;
+    justify-content: space-between;
+  }
+  }
