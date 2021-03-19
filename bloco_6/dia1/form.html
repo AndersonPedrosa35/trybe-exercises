@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <title>Exercício dia 1</title>
+</head>
+<body>
+  <header>
+    <h1>Forms register</h1>
+    <p>Describe your data</p>
+  </header>
+  <main>
+    <form action="" method="GET">
+      <fieldset> <span>Describe your personal info<span>
+      <section class='container-data'>
+        <label for='fullname'>Full name</label>
+        <input type="text" id='fullname' name="name" placeholder="Enter your full name" maxlength="40" required>
+      </section>
+      <section class='container-data'>
+        <label for='email'>Email</label>
+        <input type="email" id='email' name="email" placeholder="Enter your email" maxlength="50" required>
+      </section>
+      <section class='container-data'>
+        <label for='cpf'>CPF</label>
+        <input type="text" id='cpf' name="cpf" placeholder="Enter your cpf" maxlength="11" required>
+      </section>
+      <section class='container-data'>
+        <label for='adress'>Adress</label>
+        <input type="text" id="adress" name="adress" placeholder="Enter your adress" maxlength="200" required>
+      </section>
+      <section class='container-data'>
+        <label for='city'>City</label>
+        <input type="text" id="city" name="city" placeholder="Enter your city" maxlength="28" required>
+      </section>
+      <section class='container-data'>
+        <label for='state'>State</label>
+        <select name="state" id="state">
+        </select>
+      </section>
+      <section class="container-data">
+        <label for="home">Complement</label>
+        <input type="radio" id="home" value="casa" name="home">Home
+        <label for="apart"></label>
+        <input type="radio" id="apart" value="apart" name="home">Apartament
+      </section>
+      <section class='container-data'>
+        <label for="pass">Enter your password</label>
+        <input type="password" name="user" id="pass" maxlength="40" required required placeholder="Digite sua senha">
+      </section>
+      </fieldset>
+      <fieldset>
+        <label for="curriculo"><p>Describe your CV<p></label>
+        <textarea name="curriculo" id="curriculo" cols="70" rows="10" maxlength="1000" required></textarea>
+      </fieldset>
+      </form>
+  </main>
+
+  <script>
+    const state = document.querySelector('#state');
+    const arrayCity = ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Espírito Santo', 'Goiás', 'Maranhão', 'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Paraná', 'Pernambuco', 'Piauí', 'Rio de Janeiro', 'Rio Grande do Norte', 'Rio Grande do Sul', 'Rondônio', 'Roraima', 'Santa Catarina', 'São Paulo', 'Sergipe', 'Tocantins', 'Distrito Federal'];
+    const uf = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO', 'DF'];
+    function createOptions() {
+      for (let i = 0; i < arrayCity.length; i += 1) {
+        const listCity = document.createElement('option');
+        listCity.innerHTML = arrayCity[i];
+        listCity.value = uf[i];
+        state.appendChild(listCity);
+      }
+    } createOptions();
+  </script>
+</body>
+</html>
