@@ -10,4 +10,5 @@ function sum(a, b) {
 
 // implemente seus testes aqui
 assert.strictEqual(sum(5, 4), 9, "O resultado não foi o esperado");
+assert.strictEqual(sum(5, "4"), 9, "O resultado não foi o esperado");
 assert.strictEqual(sum(0, 0), 0, "O resultado não foi o esperado");
