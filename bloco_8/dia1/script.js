@@ -22,3 +22,15 @@ function newEmployees (register) {
   }
   console.log(usuarios);
 } newEmployees(register);
+
+const check = (num1, num2) => num1 === num2;
+
+function randomSorteio (num1, check) {
+  const sorteio = Math.ceil(Math.random() * 5);
+  console.log(sorteio);
+  if (check(num1, sorteio)) {
+    console.log('Parabéns você ganhou');
+  } else {
+    console.log('Tente novamente');
+  }
+} randomSorteio( 3, check);
