@@ -34,3 +34,10 @@ function randomSorteio (num1, check) {
     console.log('Tente novamente');
   }
 } randomSorteio( 3, check);
+
+const curring = (resposta) => {
+  return (gabarito) => {
+    return resposta.toLowerCase() === gabarito.toLowerCase();
+  }
+}
+ console.log(curring("ala")('ala'))
