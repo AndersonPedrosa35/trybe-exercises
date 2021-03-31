@@ -46,14 +46,35 @@ const alllessons = Object.assign({}, {
 //   }, 0);
 // }; sumStudent(alllessons)
 
-const getValueByNumber = (array, position) => {
-  let result = Object.values(array);
-  return result[position];
-};
-getValueByNumber(lesson1, 0);
+// const getValueByNumber = (array, position) => {
+//   let result = Object.values(array);
+//   return result[position];
+// };
+// getValueByNumber(lesson1, 0);
 
-const verifyPair = (object, key, value) => {
-  const array = Object.entries(object);
-  return array.some(([chave, valor]) => chave === key && valor === value);
-};
-console.log(verifyPair(lesson1, "materia", "Matemática"));
+// const verifyPair = (object, key, value) => {
+//   const array = Object.entries(object);
+//   return array.some(([chave, valor]) => chave === key && valor === value);
+// };
+// console.log(verifyPair(lesson1, "materia", "Matemática"));
+
+// const studentForClass = (object) => {
+//   let array = Object.values(object);
+//   return array.reduce((acumulador, elemento) => {
+//     if (elemento.materia == 'Matemática') {
+//       return acumulador + elemento.numeroEstudantes;
+//     }
+//     return acumulador;
+//   }, 0)
+// };
+// studentForClass(alllessons);
+
+const givenClass = (object, professor) => {
+  const array = Object.values(object);
+  return array.reduce((acumulador, elemento) => {
+    if (elemento.professor === professor) {
+      return acumulador + elemento.numeroEstudantes;
+    }
+    return acumulador;
+  }, 0)
+}; console.log(givenClass(alllessons, "Maria Clara"))
