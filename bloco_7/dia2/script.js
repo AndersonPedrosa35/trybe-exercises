@@ -32,7 +32,11 @@ const lesson3 = {
 // const valores = (object) => console.log(Object.values(object));
 // valores(lessons);
 
-const alllessons = Object.assign({}, {lesson1, lesson2, lesson3});
+const alllessons = Object.assign({}, {
+  lesson1,
+  lesson2,
+  lesson3
+});
 // console.log(alllessons);
 
 // const sumStudent = (object) => {
@@ -45,4 +49,11 @@ const alllessons = Object.assign({}, {lesson1, lesson2, lesson3});
 const getValueByNumber = (array, position) => {
   let result = Object.values(array);
   return result[position];
-}; getValueByNumber(lesson1, 0)
+};
+getValueByNumber(lesson1, 0);
+
+const verifyPair = (object, key, value) => {
+  const array = Object.entries(object);
+  return array.some(([chave, valor]) => chave === key && valor === value);
+};
+console.log(verifyPair(lesson1, "materia", "Matemática"));
