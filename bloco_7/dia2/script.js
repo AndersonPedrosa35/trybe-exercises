@@ -41,3 +41,8 @@ const alllessons = Object.assign({}, {lesson1, lesson2, lesson3});
 //     return acumulador + elemento.numeroEstudantes;
 //   }, 0);
 // }; sumStudent(alllessons)
+
+const getValueByNumber = (array, position) => {
+  let result = Object.values(array);
+  return result[position];
+}; getValueByNumber(lesson1, 0)
