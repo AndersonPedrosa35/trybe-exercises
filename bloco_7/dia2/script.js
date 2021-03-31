@@ -1,49 +1,43 @@
-const order = {
-  name: 'Rafael Andrade',
-  phoneNumber: '11-98763-1416',
-  address: {
-    street: 'Rua das Flores',
-    number: '389',
-    apartment: '701',
-  },
-  order: {
-    pizza: {
-      margherita: {
-        amount: 1,
-        price: 25,
-      },
-      pepperoni: {
-        amount: 1,
-        price: 20,
-      }
-    },
-    drinks: {
-      coke: {
-        type: 'Coca-Cola Zero',
-        price: 10,
-        amount: 1,
-      }
-    },
-    delivery: {
-      deliveryPerson: 'Ana Silveira',
-      price: 5,
-    }
-  },
-  payment: {
-    total: 50,
-  },
+const lesson1 = {
+  materia: 'Matemática',
+  numeroEstudantes: 20,
+  professor: 'Maria Clara',
+  turno: 'manhã',
 };
 
-const customerInfo = (order) => {
-  console.log(`Olá ${order.order.delivery.deliveryPerson}, entrega para: ${order.name}, Telefone: ${order.phoneNumber}, 
-  ${order.address.street}, ${order.address.number}, AP: ${order.address.apartment}.`);
-}
+const lesson2 = {
+  materia: 'História',
+  numeroEstudantes: 20,
+  professor: 'Carlos',
+};
 
-customerInfo(order);
+const lesson3 = {
+  materia: 'Matemática',
+  numeroEstudantes: 10,
+  professor: 'Maria Clara',
+  turno: 'noite',
+};
 
-const orderModifier = (order) => {
-  console.log(`Olá Luiz Silva, o total do seu pedido de muzzarella, calabresa e ${order.order.drinks.coke.type} é R$ ${order.payment.total}`);
-}
+// function manipulation (object, key, value) {
+//   object[key] = value;
+//   return object;
+// } manipulation(lesson1, "periodo", "manhã");
 
-orderModifier(order);
+// function keys (object) {
+//   return Object.keys(object);
+// } console.log(keys(lesson1))
 
+// function objectSize (object) {
+//   object.length;}
+// const valores = (object) => console.log(Object.values(object));
+// valores(lessons);
+
+const alllessons = Object.assign({}, {lesson1, lesson2, lesson3});
+// console.log(alllessons);
+
+// const sumStudent = (object) => {
+//   const array = Object.values(object);
+//   return array.reduce((acumulador, elemento) => {
+//     return acumulador + elemento.numeroEstudantes;
+//   }, 0);
+// }; sumStudent(alllessons)
