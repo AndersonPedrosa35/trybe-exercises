@@ -62,12 +62,19 @@ const books = [
     releaseYear: 1928,
   },
 ];
-
+// console.log(books);
 function smallerName() {
-  let nameBook;
-  // escreva aqui o seu código
-
-  // Variável nameBook que receberá o valor do menor nome;
+  let allNames = [];
+  let nameBook = '';
+  let book = books.forEach((value) => {
+    allNames.push(value.name);
+    if (nameBook.length === 0) {
+      nameBook = allNames[0];
+    }
+    else if (value.name.length < nameBook.length) {
+      nameBook = value.name;
+    };
+  }, 0)
   return nameBook;
 }
 
