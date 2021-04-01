@@ -85,6 +85,10 @@ const dragon = {
   damage: undefined,
 };
 
+const damageMago = {
+
+};
+
 const battleMembers = { mage, warrior, dragon };
 
 const damageDragon = () => dragon.damage = Math.ceil(Math.random() * (50 - 15) + 15);
@@ -94,3 +98,14 @@ console.log(dragon);
 const damageWarrior = () => warrior.damage = Math.ceil(Math.random() * (60 - 30) + 30);
 damageWarrior();
 console.log(warrior);
+
+const damageMage = () => {
+  if (mage.mana < 15) {
+    return 'Não possui mana suficiente';
+  } else {
+    mage.damage = Math.ceil(Math.random() * (90 - 45) + 45);
+    mage.mana -= 15;
+  }
+}
+damageMage();
+console.log(mage);
