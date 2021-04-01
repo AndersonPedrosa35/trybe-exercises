@@ -43,7 +43,7 @@
 //  console.log(curring("ala")('ala'))
  
 const rightAnswers = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
-const studentAnswers = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+const studentAnswers = ['A', 'C', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 const check = (gabarito, respostas) => {
   let count = 0;
   for (let index in gabarito) {
@@ -61,8 +61,6 @@ const quiz = (gabarito) => {
   gabarito;  
   return (respostas) => {
     respostas;
-    return (check) => {
-      check();
-    }
-  } 
-}; quiz(rightAnswers)(studentAnswers)(check(rightAnswers, studentAnswers));
+    return (check) => console.log(check(gabarito, respostas));
+  }
+}; quiz(rightAnswers)(studentAnswers)(check);
