@@ -42,25 +42,55 @@
 // }
 //  console.log(curring("ala")('ala'))
  
-const rightAnswers = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
-const studentAnswers = ['A', 'C', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
-const check = (gabarito, respostas) => {
-  let count = 0;
-  for (let index in gabarito) {
-    if (gabarito[index] === respostas[index]) {
-      count += 1;
-    } else if (gabarito[index] === respostas[index]) {
-     count -= 0.5;
-    } else {
-       'N.A';
-    }
-  }
-  return count;
-}
-const quiz = (gabarito) => {
-  gabarito;  
-  return (respostas) => {
-    respostas;
-    return (check) => console.log(check(gabarito, respostas));
-  }
-}; quiz(rightAnswers)(studentAnswers)(check);
+// const rightAnswers = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+// const studentAnswers = ['A', 'C', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+// const check = (gabarito, respostas) => {
+//   let count = 0;
+//   for (let index in gabarito) {
+//     if (gabarito[index] === respostas[index]) {
+//       count += 1;
+//     } else if (gabarito[index] === respostas[index]) {
+//      count -= 0.5;
+//     } else {
+//        'N.A';
+//     }
+//   }
+//   return count;
+// }
+// const quiz = (gabarito) => {
+//   gabarito;  
+//   return (respostas) => {
+//     respostas;
+//     return (check) => console.log(check(gabarito, respostas));
+//   }
+// }; quiz(rightAnswers)(studentAnswers)(check);
+
+const mage = {
+  healthPoints: 130,
+  intelligence: 45,
+  mana: 125,
+  damage: undefined,
+};
+
+const warrior = {
+  healthPoints: 200,
+  strength: 30,
+  weaponDmg: 2,
+  damage: undefined,
+};
+
+const dragon = {
+  healthPoints: 350,
+  strength: 50,
+  damage: undefined,
+};
+
+const battleMembers = { mage, warrior, dragon };
+
+const damageDragon = () => dragon.damage = Math.ceil(Math.random() * (50 - 15) + 15);
+damageDragon();
+console.log(dragon);
+
+const damageWarrior = () => warrior.damage = Math.ceil(Math.random() * (60 - 30) + 30);
+damageWarrior();
+console.log(warrior);
