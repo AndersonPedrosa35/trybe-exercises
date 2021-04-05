@@ -104,14 +104,10 @@ const expectedResult = [
 ];
 
 function formatedBookNames(array) {
-  let repart = [];
-  for (let index in array) {
-    repart.push(array[index].split('-'));
-  }
-  const livros = repart.map((element) => {
-    return {name : element[0], genre : element[1], author : element[2]};
+  const book = books.map((element) => {
+    return `${element.name} - ${element.genre} - ${element.author.name}`;
   })
-  console.log(livros);
-}; console.log(formatedBookNames(expectedResult));
+  return book;
+}
 
 assert.deepStrictEqual(formatedBookNames(), expectedResult);
