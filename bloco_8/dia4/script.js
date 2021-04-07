@@ -88,3 +88,20 @@ const estudantes = [
 
 // const nota = Object.values(estudantes);
 // console.log(nota);
+
+
+const assert = require('assert');
+
+const arrays = [
+    ['1', '2', '3'],
+    [true],
+    [4, 5, 6],
+];
+
+function flatten() {
+  let [arr1, arr2, arr3] = arrays;
+  let array = [...arr1, ...arr2, ...arr3];
+  return array;
+}
+
+assert.deepStrictEqual(flatten(), ['1', '2', '3', true, 4, 5, 6]);
