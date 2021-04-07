@@ -78,17 +78,16 @@ const books = [
 
 // assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
 
-const expectedResult = [
-  'O Senhor dos Anéis',
-  'Fundação',
-  'O Chamado de Cthulhu',
-];
+// const expectedResult = [
+//   'O Senhor dos Anéis',
+//   'Fundação',
+//   'O Chamado de Cthulhu',
+// ];
 
-function oldBooks() {
-  const book = books.filter((element) => 2021 - element.releaseYear >= 60);
-  return book.map((element) => element.name);
-} oldBooks()
-
-
+// function oldBooks() {
+//   const book = books.filter((element) => 2021 - element.releaseYear >= 60);
+//   return book.map((element) => element.name);
+// } oldBooks();
 
 // assert.deepStrictEqual(oldBooks(), expectedResult);
+
