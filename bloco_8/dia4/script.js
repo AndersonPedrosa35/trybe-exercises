@@ -105,3 +105,18 @@ function flatten() {
 }
 
 assert.deepStrictEqual(flatten(), ['1', '2', '3', true, 4, 5, 6]);
+
+
+const assert = require('assert');
+
+const names = [
+  'Aanemarie', 'Adervandes', 'Akifusa',
+  'Abegildo', 'Adicellia', 'Aladonata',
+  'Abeladerco', 'Adieidy', 'Alarucha',
+];
+
+function containsA() {
+  // escreva seu código aqui
+}
+
+assert.deepStrictEqual(containsA(), 20);
