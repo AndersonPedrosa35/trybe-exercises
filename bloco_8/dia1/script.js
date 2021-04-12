@@ -86,7 +86,6 @@ const dragon = {
 };
 
 const damageMago = {
-
 };
 
 const battleMembers = { mage, warrior, dragon };
@@ -105,7 +104,7 @@ const damageMage = () => {
 }
 // healthPoints: 350,
 const gameActions = {
-  warrior: (functDamage) => {
+  warriorFunction: (functDamage) => {
     functDamage();
     return dragon.healthPoints -= warrior.damage;
     console.log(battleMembers);
@@ -122,3 +121,7 @@ const gameActions = {
     console.log(battleMembers);
   }
 };
+
+module.exports = {
+  warriorFunction,
+}
