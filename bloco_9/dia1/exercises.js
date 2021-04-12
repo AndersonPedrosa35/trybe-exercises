@@ -43,3 +43,20 @@ const getPlanet = () => {
 };
 
 getPlanet(); // imprime Marte depois de 4 segundos
+
+const messageDelay = () => Math.floor(Math.random() * 5000);
+
+const getMarsTemperature = () => {
+  const maxTemperature = 58;
+  return Math.floor(Math.random() * maxTemperature);
+};
+
+const sendMarsTemperature = () => {
+  setTimeout(() => {
+    let celsius = getMarsTemperature();
+    console.log(`A temperatura em Marte é de ${celsius} graus.`);
+  }, 4000);
+}
+
+
+sendMarsTemperature(); // imprime "Mars temperature is: 20 degree Celsius", por exemplo
