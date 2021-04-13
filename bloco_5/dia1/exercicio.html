@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css">
+    <title>Exercício 5.1</title>
+  </head>
+  <body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+        document.getElementsByTagName("p")[0].style.fontFamily = "Monospace";
+        function textP () {
+          document.getElementsByTagName("p")[0].innerText = "Eu sou Anderson, estou aqui para ser uma fagulha na explosão que haverá em tecnologia";
+        } textP();
+        function colorTrybe() {
+          document.getElementsByClassName("main-content")[0].style.backgroundColor = "rgb(76, 164, 109)"
+        } colorTrybe();
+        function centerContent() {
+          document.getElementsByClassName("center-content")[0].style.backgroundColor = "white";
+        } centerContent();
+        function corrij () {
+          document.getElementsByTagName("h1")[0].innerHTML = "Exercício de fixação";
+        } corrij();
+        function upCase () {
+          let paragraf = document.getElementsByTagName("p")[2].innerHTML = "trybe".toUpperCase();  
+        } upCase()
+      console.log(document.getElementsByTagName("p"));
+        /*
+        
+ Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        */
+    </script>
+  </body>
+</html>
