@@ -20,4 +20,5 @@ window.onload = () => fetchJoke();
 
 const promise = new Promise((resolve, reject) => {
 let array = [1, 3, 5, 6, 7, 8, 9, 12, 34, 20];
+
 });
