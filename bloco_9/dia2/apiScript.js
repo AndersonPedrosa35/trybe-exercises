@@ -21,6 +21,7 @@ const fetchJoke = () => {
 function soma (array, resolve, reject) {
   let soma = array.reduce((acc, number) => acc + number);
   if (soma < 800) {
+    let arr = [...soma, ...soma, ...soma, ...soma];
     return resolve(soma);
   }
   return reject(soma);
