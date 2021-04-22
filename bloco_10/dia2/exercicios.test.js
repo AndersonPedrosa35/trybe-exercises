@@ -1,4 +1,4 @@
-const { uppercase, findUserById, getUserName } = require('./exercícios');
+const { uppercase, findUserById, getUserName, getRepos } = require('./exercícios');
 
 it('should to return upppercase', () => {
   uppercase('ola', (string) => {
@@ -18,5 +18,14 @@ describe('Testando função getUser', () => {
    } catch (error) {
      expect(error).toEqual({"error": "User with 6 not found."});
    }
+  });
+});
+
+describe('Testando a função getRepos', () => {
+  it('Should contain two repository', () => {
+    return getRepos('https://api.github.com/orgs/tryber/repos').then((response) => {
+      expect(response).toContain('sd-01-week4-5-project-todo-list');
+      expect(response).toContain('sd-01-week4-5-project-meme-generator');
+    });
   });
 });
