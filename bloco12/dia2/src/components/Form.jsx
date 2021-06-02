@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { actionChange } from '../actions/action';
 import './form.css';
 
 class Form extends React.Component {
@@ -6,14 +8,14 @@ class Form extends React.Component {
     super();
 
     this.handleChange = this.handleChange.bind(this);
-    this.removeCharSpec = this.removeCharSpec.bind(this);
+    this.removeCharSpec = this.removeCharSpec.bind(this)
 
     this.state = {
       name: '',
       email: '',
       cpf: 0,
       cep: 0,
-      adress: '',
+      endereco: '',
       city: '',
       states: '',
       checkbox: false,
@@ -32,11 +34,18 @@ class Form extends React.Component {
       adress: this.state.adress.split(`@#$%&*'"`).join(),
     })
   }
+
+  notReload(event) {
+    event.preventDefault();
+  }
+
   render () {
+    const { client, clientState } = this.props;
+    console.log(clientState);
     return (
       <section>
         <h1>Cadastre-se</h1>
-        <form>
+        <form action='GET'>
           <label>
             Nome
             <input type="text" name="name" value={this.state.name.toUpperCase()} onChange={this.handleChange} maxLength='40' required />
@@ -69,10 +78,27 @@ class Form extends React.Component {
             Quer receber promoções
             <input type="checkbox" name="checkbox" className="checkbox" value={this.state.checkbox} onChange={this.handleChange} />
           </label>
+          <button 
+            type='submit' 
+            onClick={ (event) => { 
+              client(this.state);
+              this.notReload(event);
+            }}
+          >
+            Cadastrar
+          </button>
         </form>
       </section>  
     )
   }
 }
 
-export default Form;
+const mapDispatchToProps = (dispatch) => ({
+  client: (payload) => dispatch(actionChange(payload)),
+})
+
+const mapStateToProps = (state) => ({
+  clientState: state,
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Form);

@@ -1,0 +1,10 @@
+const INITIAL_STATE = [];
+
+export default function reducer(state = INITIAL_STATE, action) {
+  switch (action.type) {
+    case 'ADD_CLIENT':
+      return [...state, action.payload];
+    default:
+      return state;
+  }
+}
