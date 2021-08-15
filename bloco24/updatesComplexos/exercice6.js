@@ -2,11 +2,7 @@ use("class");
 db.movies.updateOne({
   title: "Batman"
 }, {
-  $push: {
-    category: {
-      $each: [
-        "action"
-      ],
+  $addToSet: {
+    category: "action"
     }
-  }
 });
