@@ -2,7 +2,7 @@ use("class");
 db.movies.updateOne({
   title: "Home Alone"
 }, {
-  $push: {
+  $set: {
     cast: [
       {
         "actor": "Macaulay Culkin",
