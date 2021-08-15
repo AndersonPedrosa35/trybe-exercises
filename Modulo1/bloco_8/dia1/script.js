@@ -88,6 +88,13 @@ const dragon = {
 const damageMago = {
 };
 
+let arr = ['a', 'b', 'v'];
+const arrayCity = ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Espírito Santo', 'Goiás', 'Maranhão', 'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Paraná', 'Pernambuco', 'Piauí', 'Rio de Janeiro', 'Rio Grande do Norte', 'Rio Grande do Sul', 'Rondônio', 'Roraima', 'Santa Catarina', 'São Paulo', 'Sergipe', 'Tocantins', 'Distrito Federal'];
+const uf = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO', 'DF'];
+
+const  arrAll = [...arr, ...arrayCity, ...uf];
+console.log(arrAll.sort());
+
 const battleMembers = { mage, warrior, dragon };
 
 const damageDragon = () => dragon.damage = Math.ceil(Math.random() * (50 - 15) + 15);
