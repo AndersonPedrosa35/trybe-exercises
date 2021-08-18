@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(123, 125, 255);
+}
+
+h2 {
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    width: 80%;
+    margin-top: -250px;
+}
+
+.main li{
+    list-style: none;
+    margin: 0 4% 0 0;
+    padding: 3px;    
+}
+
+aside {
+    background-color: aqua;
+    display: inline-block;
+    width: 20%;
+}
+
