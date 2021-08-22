@@ -1,0 +1,29 @@
+use("erp");
+db.clientes.aggregate([
+  { $project: {
+    idade:
+      { $divide: [
+        { $subtract: [ new Date(), "$dataNascimento" ] },
+           86400000 * 365
+        ]
+      } 
+  }},
+  { $project: {
+    idade: { $round: ["$idade"] }
+  } },
+  { $lookup: {
+    from: "vendas",
+    let: { idade: "$idade"},
+    pipeline: [
+      { $match: { idade: {
+        $gte: 18,
+        $lte: 25
+      } } },
+      { $group: {
+          _id: "$clienteId",
+          compras: { $sum: 1 }
+      } }
+    ],
+    as: "descricao"
+  } }
+])
