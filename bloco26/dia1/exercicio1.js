@@ -12,5 +12,8 @@ async function retornaPromisse(param1, param2, param3) {
   });
   return promisse;
 }
-retornaPromisse(10, 20, 30)
+retornaPromisse(
+  (Math.random() * 10), 
+  (Math.random() * 20), 
+  (Math.random() * 30))
   .then((resolve) => console.log(resolve));
