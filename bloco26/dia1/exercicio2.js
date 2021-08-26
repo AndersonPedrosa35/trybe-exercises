@@ -1,5 +1,5 @@
 const readline = require('readline-sync');
-async function retornaPromisse(param1, param2, param3) {
+async function manipulaPromisse(param1, param2,) {
   const promisse = await new Promise((resolve, reject) => {
     if(typeof(param1) != 'number' || 
     typeof(param2) != 'number' || 
@@ -12,9 +12,9 @@ async function retornaPromisse(param1, param2, param3) {
   });
   return promisse;
 }
-retornaPromisse(
-  (Math.random() * 10), 
-  (Math.random() * 20), 
-  (Math.random() * 30))
-  .then((resolve) => console.log(resolve))
-  .catch((err) => console.log(err.message));
+
+async function chamaPromisse() {
+  return await manipulaPromisse(10, 20, 20);
+}
+
+chamaPromisse()
