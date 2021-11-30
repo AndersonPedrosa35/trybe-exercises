@@ -5,7 +5,7 @@ def createMessage():
 
 import random;
 
-def guessNumber():
+def guess_number():
     random_number = random.randint(1, 10)
     guess = ""
 
@@ -14,4 +14,10 @@ def guessNumber():
     
     print("O número sorteado era: ", guess)
 
-guessNumber();
+
+def name_write():
+    name = input('Qual o seu nome? ');
+    for carac in name:
+        print(carac)
+
+name_write()
