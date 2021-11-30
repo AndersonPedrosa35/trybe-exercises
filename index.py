@@ -20,4 +20,15 @@ def name_write():
     for carac in name:
         print(carac)
 
-name_write()
+
+def sum_numbers(*numbers):
+    sum = 0
+    for num in numbers:
+        if type(num) == "int":
+            print('Entrei')
+        else:
+            f"Erro ao somar valores, {sum} é um valor inválido"
+    print(sum)
+
+
+sum_numbers(10, 20, 30, 40, 50)
