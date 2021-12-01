@@ -1,3 +1,6 @@
+import json
+from os import wait
+
 def writeFileTeste(file_name, write):
     file = open(file_name, mode='w');
 
@@ -17,7 +20,13 @@ def readFile(file_name):
     #         object_file[people] = int(content_file[index + 1])
     return content_file;
 
+
+def read_and_write_json(file_json):
+    with open(file_json) as file:
+        pokemons = json.load(file)
+        return pokemons
+
 if __name__ == "__main__":
-    file = readFile('escrever.txt')
+    file = read_and_write_json('pokemon.json')
     print(file);
         
